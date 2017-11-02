@@ -1,0 +1,35 @@
+docker run -it  \
+           -e ACCEPT_EULA=y \
+           -p 127.0.0.1:80:8888 \
+           -v ~/workspace/mmlspark:/notebooks/myfiles \
+           microsoft/mmlspark:
+           https://mmlspark.azureedge.net/datasets/CIFAR10/cifar-10-python.tar.gz
+
+
+**********Extra useful stuff***********
+Make PY_ODBC work : follow the steps below
+
+apt-get -y install unixodbc unixodbc-dev
+
+apt-get update && ACCEPT_EULA=Y apt-get -y install msodbcsql
+
+apt-get update && ACCEPT_EULA=Y apt-get -y install mssql-tools
+
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+
+apt-get update && apt-get install -y     python-pip python-dev python-setuptools     --no-install-recommends     && rm -rf /var/lib/apt/lists/*
+
+apt-get update && apt-get install -y locales     && echo "en_US.UTF-8 UTF-8" > /etc/locale.gen     && locale-gen
+
+pip install --upgrade pip
+
+pip install pyodbc
+
+curl -LO https://repo.continuum.io/archive/Anaconda2-4.3.0-Linux-x86_64.sh &&     bash Anaconda2-4.3.0-Linux-x86_64.sh -p /Anaconda -b &&     rm Anaconda2-4.3.0-Linux-x86_64.sh &&     rm -rf /var/lib/apt/lists/*
+
+echo "export PATH=$PATH:/Anaconda/bin" >> /etc/profile
+
+conda update -y conda
+
+openssl pkcs12 -in  myfile.pfx -nocerts -out private_key.pem -nodes
+openssl pkcs12 -in cert-download.pfx -nokeys -out hdinsightr.cert

@@ -1,0 +1,25 @@
+Get Certificate data from downloaded Cert
+
+$fileContentBytes = get-content 'C:srramhdimac.pfx' -Encoding Byte
+
+[System.Convert]::ToBase64String($fileContentBytes) | Out-File 'pfx-bytes.txt'
+
+
+
+
+
+
+
+$certificateFilePath = "C:\srramhdimac.pfx"
+
+$password = Read-Host –Prompt "Enter the password" # This is the password you specified for the .pfx file
+
+$certificatePFX = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2($certificateFilePath, $password)
+
+$rawCertificateData = $certificatePFX.GetRawCertData()
+
+[System.Convert]::ToBase64String($rawCertificateData) > C:\Users\srram\certificatetext.txt
+
+
+
+

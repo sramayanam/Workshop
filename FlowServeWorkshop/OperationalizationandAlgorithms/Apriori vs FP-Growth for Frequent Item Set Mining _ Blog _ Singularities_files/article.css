@@ -1,0 +1,63 @@
+#article-layout {
+  padding-top: 65px;
+  padding-bottom: 75px; }
+  #article-layout #article-sidebar label {
+    color: #a8a8a8; }
+  #article-layout #article-sidebar .share-buttons {
+    margin-bottom: 27px; }
+  #article-layout #article-sidebar p {
+    margin-bottom: 22px; }
+  #article-layout #article-sidebar hr {
+    margin-top: 30px;
+    margin-bottom: 30px; }
+  #article-layout #article-header .sub-title {
+    font-weight: 300; }
+  #article-layout #article-header .list-body-text {
+    color: #656565; }
+  #article-layout #article-body br.extra-small {
+    display: none; }
+  #article-layout #article-body hr {
+    margin-top: 15px;
+    margin-bottom: 15px; }
+  #article-layout #article-body .article-main-image {
+    margin-top: 20px;
+    margin-bottom: 45px; }
+  #article-layout #article-body p, #article-layout #article-body a {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 300;
+    color: #565656; }
+  #article-layout #article-body a {
+    color: #5c77cc; }
+  #article-layout #article-body #article-pager {
+    display: inline;
+    float: right;
+    color: #a8a8a8; }
+    #article-layout #article-body #article-pager a.pager-label {
+      color: #a8a8a8; }
+    #article-layout #article-body #article-pager a {
+      color: #565656; }
+  #article-layout #article-body .share-buttons {
+    display: inline; }
+
+@media only screen and (max-width: 440px) {
+  #article-layout #article-body br.extra-small {
+    display: block; }
+  #article-layout #article-body span.spacer {
+    display: none; } }
+@media only screen and (max-width: 40em) {
+  #article-layout #article-body .article-main-image {
+    margin-bottom: 10px; }
+  #article-layout #article-body .photo-caption {
+    text-align: center; }
+  #article-layout #article-body span.bold {
+    font-weight: 400; }
+  #article-layout #article-body span.spacer {
+    margin-left: 5px;
+    margin-right: 5px; } }
+@media only screen and (max-width: 64em) {
+  #article-layout #article-body #article-pager {
+    width: 100%; }
+  #article-layout #article-body .share-buttons {
+    margin-bottom: 10px;
+    display: block; } }
