@@ -5,8 +5,12 @@ $fileContentBytes = get-content 'C:srramhdimac.pfx' -Encoding Byte
 [System.Convert]::ToBase64String($fileContentBytes) | Out-File 'pfx-bytes.txt'
 
 
-
-
+### How to set up a spark session, scala context and sql context
+//set up the spark configuration and create contexts
+val sparkConf = new SparkConf().setAppName("SparkSessionZipsExample").setMaster("local")
+// your handle to SparkContext to access other context like SQLContext
+val sc = new SparkContext(sparkConf).set("spark.some.config.option", "some-value")
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
 
 
 
